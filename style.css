@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pendulum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pen_stick {
+    height: 300px;
+    width: 10px;
+    background-color: black;
+}
+
+.pen_ball {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.stand {
+    height: 50px;
+    width: 320px;
+    margin-top: 15%;
+    background-color: black;
+    position: relative;
+    top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 5;
+    border-radius: 20px;
+    font-family: 'Permanent Marker', cursive;
+    animation-name: bg;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+#pendulum1 {
+    animation-name: pen1;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: rotatez(45deg);
+    transform-origin: top;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pen1 {
+    50% {
+        transform: rotatez(-45deg);
+    }
+    100% {
+        transform: rotatez(45deg);
+    }
+}
+
+@keyframes bg {
+    50% {
+        background-color: white;
+        color: black;
+    }
+    100% {
+        background-color: black;
+        color: white;
+    }
+}
